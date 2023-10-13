@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-angka.css">
+    <title>Angka</title>
+</head>
+<body>
+    <div class="container">
+        <audio id="backgroundAudio" src="aset/audio/BGM suggestion/y2mate.com - Katawa Shoujo OST  Air Guitar_320kbps.mp3" autoplay loop></audio>
+        <div class="audio-icon">
+            <img id="audioControl" src="aset/img/sound_on_icon.png" alt="Audio Control">
+        </div>
+
+        <img id="back_btn" src="aset/img/back_btn.png" alt="tombol kembali">
+
+        <img class="title" src="aset/img/angka_title.png" alt="Angka">
+        
+        <div class="content">
+            <img id="1" class="num" src="aset/img/contohAngka/1.png" alt="angka 1">
+            <img id="2" class="num" src="aset/img/contohAngka/2.png" alt="angka 2">
+            <img id="3" class="num" src="aset/img/contohAngka/3.png" alt="angka 3">
+            <img id="4" class="num" src="aset/img/contohAngka/4.png" alt="angka 4">
+            <img id="5" class="num" src="aset/img/contohAngka/5.png" alt="angka 5">
+            <img id="6" class="num" src="aset/img/contohAngka/6.png" alt="angka 6">
+            <img id="7" class="num" src="aset/img/contohAngka/7.png" alt="angka 7">
+            <img id="8" class="num" src="aset/img/contohAngka/8.png" alt="angka 8">
+            <img id="9" class="num" src="aset/img/contohAngka/9.png" alt="angka 9">
+        </div>
+
+    </div>
+
+    <div class="directory">
+        <div class="img-container">
+            <img src="aset/img/angka/1@3x.png" alt="1">
+            <img src="aset/img/angka/2@3x.png" alt="2">
+            <img src="aset/img/angka/3@3x.png" alt="3">
+            <img src="aset/img/angka/4@3x.png" alt="4">
+            <img src="aset/img/angka/5@3x.png" alt="5">
+            <img src="aset/img/angka/6@3x.png" alt="6">
+            <img src="aset/img/angka/7@3x.png" alt="7">
+            <img src="aset/img/angka/8@3x.png" alt="8">
+            <img src="aset/img/angka/9@3x.png" alt="9">
+        </div>
+    </div>
+
+    <script src="scrollingAnimation.js"></script>
+    <script>
+        const back = document.getElementById('back_btn');
+        const sound = document.querySelectorAll('.num');
+        const audio = document.getElementById('backgroundAudio');
+        const audioControl = document.getElementById('audioControl');
+        
+        back.addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+
+        audioControl.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                audioControl.src = 'aset/img/sound_on_icon.png';
+            } else {
+                audio.pause();
+                audioControl.src = 'aset/img/sound_off_icon.png';
+            }
+        });
+
+        sound.forEach(alf => {
+            alf.addEventListener('click', () => {
+                const id = alf.id;
+                const audioPath = "aset/audio/1-9/" + id + ".wav";
+                const audio1 = new Audio(audioPath);
+                audio1.play();
+            });
+        });
+    </script>
+</body>
+</html>

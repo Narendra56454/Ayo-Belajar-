@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: url("aset/img/background.png");
+    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #back_btn {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 4rem;
+  }
+  
+  .audio-icon {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    padding: 0.3rem;
+    /* border: 1px solid black; */
+  }
+
+  .title {
+    width: 25vw;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    width: calc(25% - 1rem);
+    margin: 1.5rem 1rem;
+  }
+  
+  .content img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+
+
+  /* --- Tablet --- */
+@media screen and (max-width: 768px) {
+
+  .title {
+      width: 40vw;
+  }
+
+  .content {
+      margin-top: 1rem;
+  }
+
+  .content img {
+      display: block;
+      width: calc(40% - 1rem);
+      margin: 1rem;
+  }
+}
+
+
+
+/* -- HANDPHONE -- */
+@media screen and (max-width: 576px) {
+
+.title {
+  width: 60vw;
+}
+  
+.content img {
+  width: calc(45% - 1rem);
+}
+
+#back_btn {
+  width: 3rem;
+  top: 2rem;
+}
+
+.audio-icon {
+  top: 2.5rem;
+}
+}

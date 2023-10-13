@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-detail-hewan.css">
+    <title>Detail Hewan</title>
+</head>
+<body>
+    <div id="content-container" class="container">
+        <audio id="backgroundAudio" src="aset/audio/BGM suggestion/y2mate.com - Katawa Shoujo OST  Air Guitar_320kbps.mp3" autoplay loop></audio>
+        <div class="audio-icon">
+            <img id="audioControl" src="aset/img/sound_on_icon.png" alt="Audio Control">
+        </div>
+
+        <img id="back_btn" src="aset/img/back_btn.png" alt="tombol kembali">
+
+        <div class="top-container">
+            <img class="title" src="aset/img/hewan_title.png" alt="hewan">
+        
+            <div id="img-container" class="img-container">
+                <img src="" alt="gambar hewan" id="pict">
+            </div>
+            
+        </div>
+        <div id="detail-hewan" class="down-container">
+            <h2 id="name"></h2>
+            <p id="description"></p>
+            <h3>Makanan</h3>
+            <p id="food"></p>
+            <img class="speaker-icon" src="aset/img/speaker_icon.png" alt="ikon speaker">
+        </div>
+    </div>
+
+    <!-- -------------DIRECTORY-------------- -->
+    <div class="directory">
+        <img id="kuda" class="hewan-card" src="aset/img/hewan_card/kuda.png" alt="gambar kuda">
+        <img id="rusa" class="hewan-card" src="aset/img/hewan_card/rusa.png" alt="gambar rusa">
+        <img id="sapi" class="hewan-card" src="aset/img/hewan_card/sapi.png" alt="gambar sapi">
+        <img id="kelinci" class="hewan-card" src="aset/img/hewan_card/kelinci.png" alt="gambar kelinci">
+        <img id="babi" class="hewan-card" src="aset/img/hewan_card/babi.png" alt="gambar babi">
+        <img id="tupai" class="hewan-card" src="aset/img/hewan_card/tupai.png" alt="gambar tupai">
+        <img id="ayam" class="hewan-card" src="aset/img/hewan_card/ayam.png" alt="gambar ayam">
+        <img id="domba" class="hewan-card" src="aset/img/hewan_card/domba.png" alt="gambar domba">
+        <img id="burung_hantu" class="hewan-card" src="aset/img/hewan_card/burung_hantu.png" alt="gambar burung hantu">
+        <img id="rakun" class="hewan-card" src="aset/img/hewan_card/rakun.png" alt="gambar rakun">
+    </div>
+
+    <script src="hewanDescription.js"></script>
+    <script>
+        const hewanCards = document.querySelectorAll('.hewan-card');
+        hewanCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.id;
+                sessionStorage.setItem('selectedHewanId', id);
+                
+                window.location.href = 'hewan-detail.html';
+            });
+        });
+    </script>
+    <script>
+        const back = document.getElementById('back_btn');
+        const audio = document.getElementById('backgroundAudio');
+        const audioControl = document.getElementById('audioControl');
+        
+        back.addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+
+        audioControl.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                audioControl.src = 'aset/img/sound_on_icon.png';
+            } else {
+                audio.pause();
+                audioControl.src = 'aset/img/sound_off_icon.png';
+            }
+        });
+    </script>
+</body>
+</html>

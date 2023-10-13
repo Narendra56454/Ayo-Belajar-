@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url("aset/img/background3.png");
+    background-size: contain;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #back_btn {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 4rem;
+  }
+  
+  .audio-icon {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    padding: 0.3rem;
+    /* border: 1px solid black; */
+  }
+
+  .ayo-belajar {
+    width: 30%;
+    margin: 2rem auto;
+  }
+
+  .content-container {
+    width: 70%;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .content-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .content-container a {
+    flex: 0 0 23%;
+  }
+  
+  .content-container img {
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+  }
+
+
+  /* ------ TABLET ------ */
+  @media screen and (max-width: 768px) {
+    .ayo-belajar {
+      width: 65%;
+    }
+
+    .content-container {
+      width: 65%;
+    }
+
+    .content-container a {
+      flex: 0 0 45%;
+      margin-bottom: 2rem;
+    }
+
+    .content-container img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  } 
+
+  /* --- desktop --- */
+  @media screen and (min-width: 1920px) {
+    .ayo-belajar {
+      width: 40%;
+      margin: 2rem auto;
+    }
+  
+    .content-container {
+      width: 80%;
+    }
+  
+    .content-container a {
+      margin-top: 3rem;
+      flex: 0 0 calc(25% - 1rem);
+    }
+  }
+  

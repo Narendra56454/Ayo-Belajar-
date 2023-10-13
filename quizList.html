@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-quizList.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <audio id="backgroundAudio" src="aset/audio/BGM suggestion/y2mate.com - Pikmin  Chapter Complete_320kbps.mp3" autoplay loop></audio>
+        <div class="audio-icon">
+            <img id="audioControl" src="aset/img/sound_on_icon.png" alt="Audio Control">
+        </div>
+
+        <img id="back_btn" src="aset/img/back_btn.png" alt="tombol kembali">
+
+        <img class="title" src="aset/img/quiz_title.png" alt="Permainan">
+
+        <div class="content">
+            <a href="siapaAku.html">
+                <div>
+                    <img src="aset/img/siapa_aku_card.png" alt="siapa aku">
+                </div>
+            </a>
+
+            <a href="memoryGame.html">
+                <div>
+                    <img src="aset/img/memory_game_card.png" alt="memory game">
+                </div>
+            </a>
+        </div>
+	</div>
+    
+
+    
+    <script>
+        const back = document.getElementById('back_btn');
+        const audio = document.getElementById('backgroundAudio');
+        const audioControl = document.getElementById('audioControl');
+        
+        back.addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+
+        audioControl.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                audioControl.src = 'aset/img/sound_on_icon.png';
+            } else {
+                audio.pause();
+                audioControl.src = 'aset/img/sound_off_icon.png';
+            }
+        });
+    </script>
+</body>
+</html>

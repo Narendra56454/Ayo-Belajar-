@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("aset/img/background.png");
+  background-size: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#back_btn {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 4rem;
+}
+
+.audio-icon {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  padding: 0.3rem;
+  /* border: 1px solid black; */
+}
+
+.title {
+  width: 30vw;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.content img {
+  display: block;
+  width: calc(20% - 1rem);
+  margin: 2rem 1rem;
+}
+
+.content img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+/* -- DIRECTORY -- */
+.directory {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-height: 21vh;
+  background-color: #D5F1F8;
+}
+
+.img-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.img-container img {
+  width: calc(9% - 1rem);
+  height: 3.5rem;
+}
+
+.img-container img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+/* --- Tablet --- */
+@media screen and (max-width: 1024px) {
+
+  .title {
+      width: 40vw;
+  }
+
+  .content {
+      margin-top: 1rem;
+  }
+
+  .content img {
+      display: block;
+      width: calc(20% - 1rem);
+      margin: 0.5rem;
+  }
+
+}
+
+
+/* -- FOR HANDPHONE -- */
+@media screen and (max-width: 576px) {
+  .container {
+  width: 75%;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+#back_btn, .audio-icon {
+  display: none;
+}
+
+.title {
+  width: 50vw;
+}
+
+.content {
+  display: flex;
+}
+
+.content img {
+  width: 45vw;
+  margin: 1rem;
+}
+
+.directory {
+  right: 0;
+  width: 25%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.img-container {
+  width: 80%;
+  margin: 1rem auto;
+  /* background-color: bisque; */
+}
+
+.img-container img {
+  display: block;
+  width: 3.5rem;
+  height: 2rem;
+  margin: 0.5rem 2rem;
+  /* background-color: cadetblue; */
+}
+
+
+}

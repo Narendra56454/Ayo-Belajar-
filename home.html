@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-home.css">
+    <title>Home</title>
+</head>
+<body>
+    
+    <div class="container">
+        <audio id="backgroundAudio" src="aset/audio/BGM suggestion/y2mate.com - Katawa Shoujo OST  Air Guitar_320kbps.mp3" autoplay loop></audio>
+        <div class="audio-icon">
+            <img id="audioControl" src="aset/img/sound_on_icon.png" alt="Audio Control">
+        </div>
+
+        <!-- <img id="back_btn" src="aset/img/back_btn.png" alt="tombol kembali"> -->
+
+        <img id="iseng" class="ayo-belajar" src="aset/img/ayo_belajar_card.png" alt="ayo belajar card">
+    
+        <div class="content-container">
+            <a href="alfabet.html"><img src="aset/img/alfabet.png" alt="alfabet card"></a>
+            <a href="angka.html"><img src="aset/img/angka.png" alt="angka card"></a>
+            <a href="hewan.html"><img src="aset/img/hewan.png" alt="hewan card"></a>
+            <a href="quizList.html"><img src="aset/img/quiz.png" alt="quiz card"></a>
+            <!-- <a href="quiz.html"><img src="aset/img/quiz.png" alt="quiz card"></a> -->
+        </div>
+    </div>
+    
+    <script>
+        // const back = document.getElementById('back_btn');
+        const titleCard = document.getElementById('iseng');
+        const audio = document.getElementById('backgroundAudio');
+        const audioControl = document.getElementById('audioControl');
+        
+        // back.addEventListener('click', function() {
+        //     window.location.href = 'home.html';
+        // });
+
+        audioControl.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                audioControl.src = 'aset/img/sound_on_icon.png';
+            } else {
+                audio.pause();
+                audioControl.src = 'aset/img/sound_off_icon.png';
+            }
+        });
+
+        titleCard.addEventListener('click', function() {
+            if (titleCard.src.endsWith('ayo_belajar_card.png')) {
+                titleCard.src = 'aset/img/ayo_belajar_card2.png';
+            } else {
+                titleCard.src = 'aset/img/ayo_belajar_card.png';
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-alfabet.css">
+    <title>Alfabet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+    <div class="container">
+        <audio id="backgroundAudio" src="aset/audio/BGM suggestion/y2mate.com - Katawa Shoujo OST  Air Guitar_320kbps.mp3" autoplay loop></audio>
+        <div class="audio-icon">
+            <img id="audioControl" src="aset/img/sound_on_icon.png" alt="Audio Control">
+        </div>
+        <img id="back_btn" src="aset/img/back_btn.png" alt="tombol kembali">
+
+        <img class="title" src="aset/img/alfabet_title.png" alt="Alfabet">
+
+        <div class="content">
+            <img id="a" class="alfabet" src="aset/img/contohHuruf/apel.png" alt="apel">
+            <img id="b" class="alfabet" src="aset/img/contohHuruf/bola.png" alt="bola">
+            <img id="c" class="alfabet" src="aset/img/contohHuruf/cabai.png" alt="cabai">
+            <img id="d" class="alfabet" src="aset/img/contohHuruf/domba.png" alt="domba">
+            <img id="e" class="alfabet" src="aset/img/contohHuruf/emas.png" alt="emas">
+            <img id="f" class="alfabet" src="aset/img/contohHuruf/feri.png" alt="feri">
+            <img id="g" class="alfabet" src="aset/img/contohHuruf/guci.png" alt="guci">
+            <img id="h" class="alfabet" src="aset/img/contohHuruf/hidung.png" alt="hidung">
+            <img id="i" class="alfabet" src="aset/img/contohHuruf/ikan.png" alt="ikan">
+            <img id="j" class="alfabet" src="aset/img/contohHuruf/jagung.png" alt="jagung">
+            <img id="k" class="alfabet" src="aset/img/contohHuruf/kelapa.png" alt="kelapa">
+            <img id="l" class="alfabet" src="aset/img/contohHuruf/lampu.png" alt="lampu">
+            <img id="m" class="alfabet" src="aset/img/contohHuruf/magnet.png" alt="magnet">
+            <img id="n" class="alfabet" src="aset/img/contohHuruf/nanas.png" alt="nanas">
+            <img id="o" class="alfabet" src="aset/img/contohHuruf/obeng.png" alt="obeng">
+            <img id="p" class="alfabet" src="aset/img/contohHuruf/palu.png" alt="palu">
+            <img id="q" class="alfabet" src="aset/img/contohHuruf/quran.png" alt="quran">
+            <img id="r" class="alfabet" src="aset/img/contohHuruf/rumah.png" alt="rumah">
+            <img id="s" class="alfabet" src="aset/img/contohHuruf/sepatu.png" alt="sepatu">
+            <img id="t" class="alfabet" src="aset/img/contohHuruf/topi.png" alt="topi">
+            <img id="u" class="alfabet" src="aset/img/contohHuruf/uang.png" alt="uang">
+            <img id="v" class="alfabet" src="aset/img/contohHuruf/vas.png" alt="vas bunga">
+            <img id="w" class="alfabet" src="aset/img/contohHuruf/wajah'.png" alt="wajah">
+            <img id="x" class="alfabet" src="aset/img/contohHuruf/xilem.png" alt="xilem">
+            <img id="y" class="alfabet" src="aset/img/contohHuruf/yoyo.png" alt="yoyo">
+            <img id="z" class="alfabet" src="aset/img/contohHuruf/zebra.png" alt="zebra">
+        </div>
+
+    </div>
+
+    <div id="directory" class="directory">
+        <div class="img-container">
+            <img src="aset/img/huruf/a.png" alt="a">
+            <img src="aset/img/huruf/b.png" alt="b">
+            <img src="aset/img/huruf/c.png" alt="c">
+            <img src="aset/img/huruf/d.png" alt="d">
+            <img src="aset/img/huruf/e.png" alt="e">
+            <img src="aset/img/huruf/f.png" alt="f">
+            <img src="aset/img/huruf/g.png" alt="g">
+            <img src="aset/img/huruf/h.png" alt="h">
+            <img src="aset/img/huruf/i.png" alt="i">
+            <img src="aset/img/huruf/j.png" alt="j">
+            <img src="aset/img/huruf/k.png" alt="k">
+            <img src="aset/img/huruf/l.png" alt="l">
+            <img src="aset/img/huruf/m.png" alt="m">
+            <img src="aset/img/huruf/n.png" alt="n">
+            <img src="aset/img/huruf/o.png" alt="o">
+            <img src="aset/img/huruf/p.png" alt="p">
+            <img src="aset/img/huruf/q.png" alt="q">
+            <img src="aset/img/huruf/r.png" alt="r">
+            <img src="aset/img/huruf/s.png" alt="s">
+            <img src="aset/img/huruf/t.png" alt="t">
+            <img src="aset/img/huruf/u.png" alt="u">
+            <img src="aset/img/huruf/v.png" alt="v">
+            <img src="aset/img/huruf/w.png" alt="w">
+            <img src="aset/img/huruf/x.png" alt="x">
+            <img src="aset/img/huruf/y.png" alt="y">
+            <img src="aset/img/huruf/z.png" alt="z">
+        </div>
+    </div>
+
+    <script src="scrollingAnimation.js"></script>
+    <script>
+        const back = document.getElementById('back_btn');
+        const sound = document.querySelectorAll('.alfabet');
+        const audio = document.getElementById('backgroundAudio');
+        const audioControl = document.getElementById('audioControl');
+        
+        back.addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+
+        audioControl.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                audioControl.src = 'aset/img/sound_on_icon.png';
+            } else {
+                audio.pause();
+                audioControl.src = 'aset/img/sound_off_icon.png';
+            }
+        });
+
+        sound.forEach(alf => {
+            alf.addEventListener('click', () => {
+                const id = alf.id;
+                const audioPath = "aset/audio/A-Z/" + id + ".wav";
+                const audio1 = new Audio(audioPath);
+                audio1.play();
+            });
+        });
+    </script>
+</body>
+</html>

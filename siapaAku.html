@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-siapaAku.css">
+    <title>Siapakah Aku?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="alert-overlay"></div>
+
+    <div id="alert">
+        <h2 id="alert-header">AWW!</h2>
+        <p id="alert-desc">Ayo bermain siapa aku!</p>
+        <a  href="quizList.html"><button class="kembali">Kembali</button></a>
+        <button onclick="startGame()" id="confirm-btn">Mulai</button>
+    </div>
+
+<img class="title" src="aset/img/siapakah_aku_title.png" alt="siapa aku">
+
+<div class="container">
+    <audio id="backgroundAudio" src="aset/audio/BGM suggestion/y2mate.com - Pikmin  Chapter Complete_320kbps.mp3" loop></audio>
+        <div class="audio-icon">
+            <img id="audioControl" src="aset/img/sound_on_icon.png" alt="Audio Control">
+        </div>
+
+        <img id="back_btn" src="aset/img/back_btn.png" alt="tombol kembali">
+
+
+    <div class="clue">
+        <img id="pict" src="aset/img/kucing.png" alt="gambar siluet">
+        <p id="desc">Aku adalah hewan peliharaan lucu dengan bulu lembut. 
+            Bunyiku meong-meong dan aku suka makan ikan.</p>
+    </div>
+    
+    <div class="answer">
+        <div id="a" class="chooice">
+            <img id="imgA" src="aset/img/kucing_chooice.png" alt="gambar hewan">
+        </div>
+    
+        <div id="b" class="chooice">
+            <img id="imgB" src="aset/img/anjing_chooice.png" alt="gambar hewan">
+        </div>
+    
+        <div id="c" class="chooice">
+            <img id="imgC" src="aset/img/gajah_chooice.png" alt="gambar hewan">
+        </div>
+    
+        <div id="d" class="chooice">
+            <img id="imgD" src="aset/img/kudanil_chooice.png" alt="gambar hewan">
+        </div>
+    </div>
+</div>
+
+
+<!-- SCRIPT -->
+<script src="siapaAku.js"></script>
+</body>
+</html>
